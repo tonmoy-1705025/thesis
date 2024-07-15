@@ -52,7 +52,7 @@
   "train":
   {
     "use_cuda": false,
-    "epochs": 100,
+    "epochs": 4,
     "half_lr": true,
     "early_stop": true,
     "max_norm": 5,

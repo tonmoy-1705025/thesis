@@ -431,20 +431,20 @@ class Sepformer(nn.Module):
         return package
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    x = torch.rand(1, 32000)
+#     x = torch.rand(1, 32000)
 
-    model = Sepformer(N=128,
-                      C=2,
-                      L=2,
-                      H=8,
-                      K=250,
-                      Global_B=1,
-                      Local_B=1)
+#     model = Sepformer(N=128,
+#                       C=2,
+#                       L=2,
+#                       H=8,
+#                       K=250,
+#                       Global_B=1,
+#                       Local_B=1)
 
-    print("{:.3f} million".format(sum([param.nelement() for param in model.parameters()]) / 1e6))
+#     print("{:.3f} million".format(sum([param.nelement() for param in model.parameters()]) / 1e6))
 
-    y = model(x)
+#     y = model(x)
 
-    print(y.shape)
+#     print(y.shape)

@@ -81,6 +81,7 @@ class Trainer(object):
     def train(self):
 
         self.console.print(Markdown("# @@ Train Start @@"))
+        print(self.epochs)
 
         for epoch in range(self.start_epoch, self.epochs):
             
@@ -224,7 +225,6 @@ class Trainer(object):
                 mixture_lengths = mixture_lengths.cuda()
                 padded_source = padded_source.cuda()
 
-            print(padded_mixture)
             estimate_source = self.model(padded_mixture)  # Put data into model
 
             loss, max_snr, estimate_source, reorder_estimate_source = cal_loss_pit(padded_source,
